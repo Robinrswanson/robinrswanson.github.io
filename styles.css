@@ -6,6 +6,9 @@ body {
     margin: 0;
     position: relative;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
@@ -45,7 +48,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 3rem;
+    padding: 4.5rem 1rem;
 }
 
 .portrait {
@@ -64,6 +67,7 @@ h1, h2 {
     border-collapse: collapse;
     font-size: 0.75rem;
     margin: 1rem;
+    width: clamp(200px, 80%, 1200px);
   }
   
 th, td {
@@ -81,8 +85,109 @@ td:first-child, th:first-child {
     font-weight: bold;
   }
 
+  @media only screen and (min-width: 768px) {
+    .timetable{
+        font-size: 1rem;
+    }
+  }
+
 .class {
     background-color: #00b8d4;
+}
+
+.project-container {
+    max-width: 1080px;
+    display: grid;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.card {
+    height: 400px;
+    grid-column: span 12;
+    border-radius: 1rem;
+    background-color: #ddd;
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.project-title {
+    color:#00b8d4;
+    font-size: 1.5rem;
+    margin: 0.5rem 1rem;
+}
+
+.project-title:hover {
+    color:#fff;
+}
+
+.project-description{
+    margin: 0.5rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .card.p1, .card.p3, .card.p5{
+        grid-column: 2 / span 5;
+    }
+
+    .card.p2, .card.p4, .card.p6{
+        grid-column: 7 / span 5;
+    }
+}
+
+form {
+    background-color: #fff;
+    width: -webkit-fill-available;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5);
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.mail {
+    font-family: 'Times New Roman';
 }
 
 footer {
@@ -92,8 +197,6 @@ footer {
     background-color: #000;
     height: 3rem;
     width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 footer p {

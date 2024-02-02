@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <Header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </Header>
+    <main>
+      <h1>Projects</h1>
+      <h2>Here are some of my current and past projects.</h2>
+      <div class="project-container">
+        <div class="card p1">
+            <img src="images/project-sp.png">
+            <a href="https://stop-procrastinating.vercel.app/"><p class="project-title">Stop Procrastinating</p></a>
+            <p class="project-description"> 
+                A productivity-focused application leveraging React for the frontend and Node.js with Express.js for the backend, enabling users to efficiently create, manage, and track tasks. Integrated a unique feature allowing users to select individual tasks and set customized timers.
+            </p>
+        </div>
+        <div class="card p2">
+            <img src="images/project-utja.png">
+            <a href="https://uoftja.github.io/"><p class="project-title">UTJA Club Website</p></a>
+            <p class="project-description"> 
+                The University of Toronto Japan Association's official club website is meticulously crafted using HTML, CSS, and Javascript. Notably, a 12-column grid system is implemented for a well-organized layout. The site features responsive design and employs jQuery for optimal user experience across devices.            </p>
+        </div>
+        <div class="card p3">
+            <img src="images/project-yt.png">
+            <a href="https://htmlpreview.github.io/?https://github.com/Robinrswanson/YouTubeClone/blob/main/youtube.html"><p class="project-title">Youtube Clone</p></a>
+            <p class="project-description"> 
+                The YouTube clone project, built using HTML, CSS, and Javascript, replicates the familiar YouTube interface with functional and visually appealing elements. The combination of these technologies ensures a seamless and interactive user experience.            </p>
+        </div>
+        <div class="card p4">
+            <img src="images/project-cr.png">
+            <a href="https://github.com/weiceica/CR_analytics"><p class="project-title">Clash Royale Analytics</p></a>
+            <p class="project-description"> 
+
+                "Clash Royale Analytics," a Django and React-based game stats visualizer, efficiently manages data on PostgreSQL via AWS, utilizing Python for insightful analysis, highlighting top-performing cards and predicting match outcomes with TensorFlow.            </p>
+        </div>
+      </div>
+      <h1>Need a fullstack developer?</h1>
+      <form action="https://postman-echo.com/post" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="projectType">Project Type:</label>
+        <select id="projectType" name="projectType" required>
+          <option value="Personal Website">Personal Website</option>
+          <option value="eCommerce">eCommerce</option>
+          <option value="Game">Game</option>
+        </select>
+    
+        <label for="projectDescription">Project Description:</label>
+        <textarea id="projectDescription" name="projectDescription" placeholder="Enter your project concept here" rows="4" required></textarea>
+    
+        <label for="attachment">Attachment:</label>
+        <input type="file" id="attachment" name="attachment" accept=".pdf, .doc, .docx" required>
+    
+        <label for="consent">You agree to receive emails from me</label>
+        <input type="checkbox" id="consent" name="consent" required>
+    
+        <button type="submit">Send</button>
+      </form>
+    </main>
+    <footer>
+      <p>Copyright 2024 by swanso31</p>
+    </footer>
+	<script src="index.js"></script>
+  </body>
+</html>
